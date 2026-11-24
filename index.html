@@ -1,12 +1,145 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My First Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#17251d">
+    <meta name="description" content="Seasonal ingredients, comforting recipes, and a warm welcome at Sangin Restaurant.">
+    <title>Sangin Restaurant | Good food, good company</title>
+    <link rel="icon" type="image/svg+xml" href="logo.svg">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
+    <header class="site-header">
+        <a class="brand" href="#home" aria-label="Sangin Restaurant home">
+            <img class="brand-logo" src="logo.svg" alt="Sangin Restaurant">
+        </a>
+        <nav class="main-nav" aria-label="Main navigation">
+            <a href="#menu">Our menu</a>
+            <a href="#story">Our story</a>
+            <a href="#visit">Visit us</a>
+        </nav>
+        <a class="button button-small header-cta" href="#visit">Book a table <span aria-hidden="true">↗</span></a>
+    </header>
 
-    <h1>Hello GitHub!</h1>
-    <p>This is my first project.</p>
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <p class="eyebrow"><span></span> GOOD FOOD, GOOD COMPANY</p>
+                <h1>A little more<br>time around<br><em>the table.</em></h1>
+                <p class="hero-copy">Seasonal ingredients, comforting recipes, and a warm welcome every time you walk through our door.</p>
+                <div class="hero-actions">
+                    <a class="button" href="#menu">Explore our menu <span aria-hidden="true">↗</span></a>
+                    <a class="text-link" href="#story">Get to know us <span aria-hidden="true">↓</span></a>
+                </div>
+                <div class="hero-note"><span class="note-stars" aria-label="Five stars">★★★★★</span><span>Made with care, served with love.</span></div>
+            </div>
+            <div class="hero-visual">
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&amp;fit=crop&amp;w=1400&amp;q=85" alt="Warmly lit restaurant dining room" fetchpriority="high">
+                <div class="image-stamp"><span>GOOD FOOD</span><span>GOOD</span><span>COMPANY</span></div>
+                <p class="photo-caption">Gather around something good.</p>
+            </div>
+            <a class="scroll-cue" href="#menu" aria-label="Scroll to the menu">↓</a>
+        </section>
 
+        <section class="menu-section section-wrap" id="menu">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow eyebrow-dark"><span></span> STRAIGHT FROM OUR KITCHEN</p>
+                    <h2>Some of our <em>favorites.</em></h2>
+                </div>
+                <p>Thoughtful ingredients. No fuss.<br>Just really good food.</p>
+            </div>
+            <div class="menu-filters" role="group" aria-label="Filter menu by course">
+                <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">Everything</button>
+                <button class="filter-button" type="button" data-filter="starter" aria-pressed="false">To start</button>
+                <button class="filter-button" type="button" data-filter="main" aria-pressed="false">Main plates</button>
+                <button class="filter-button" type="button" data-filter="dessert" aria-pressed="false">Something sweet</button>
+            </div>
+            <div class="menu-grid">
+                <article class="menu-card" data-category="starter">
+                    <div class="dish-art"><img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&amp;fit=crop&amp;w=760&amp;q=80" alt="Fresh garden salad with colorful seasonal vegetables" loading="lazy"></div>
+                    <div class="dish-info"><div><h3>Garden greens</h3><p>Herbs, whipped feta, toasted seeds</p></div><span class="price">$12</span></div>
+                    <span class="dish-tag">A fresh start</span>
+                </article>
+                <article class="menu-card" data-category="starter">
+                    <div class="dish-art"><img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&amp;fit=crop&amp;w=760&amp;q=80" alt="A bowl of fresh seasonal soup" loading="lazy"></div>
+                    <div class="dish-info"><div><h3>Market soup</h3><p>Today’s vegetables, warm sourdough</p></div><span class="price">$10</span></div>
+                    <span class="dish-tag">Changes with the season</span>
+                </article>
+                <article class="menu-card" data-category="main">
+                    <div class="dish-art"><img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&amp;fit=crop&amp;w=760&amp;q=80" alt="Fresh pasta with herbs and parmesan" loading="lazy"></div>
+                    <div class="dish-info"><div><h3>Sunday kind of pasta</h3><p>Slow tomato, parmesan, basil</p></div><span class="price">$18</span></div>
+                    <span class="dish-tag">Guest favorite</span>
+                </article>
+                <article class="menu-card" data-category="main">
+                    <div class="dish-art"><img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&amp;fit=crop&amp;w=760&amp;q=80" alt="Grilled main course served with fresh sides" loading="lazy"></div>
+                    <div class="dish-info"><div><h3>Oak-grilled supper</h3><p>Seasonal sides, garden herb sauce</p></div><span class="price">$24</span></div>
+                    <span class="dish-tag">From the grill</span>
+                </article>
+                <article class="menu-card" data-category="dessert">
+                    <div class="dish-art"><img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&amp;fit=crop&amp;w=760&amp;q=80" alt="Rich chocolate cake topped with chocolate shavings" loading="lazy"></div>
+                    <div class="dish-info"><div><h3>Chocolate celebration cake</h3><p>Dark chocolate, soft cream</p></div><span class="price">$9</span></div>
+                    <span class="dish-tag">Save a little room</span>
+                </article>
+                <article class="menu-card" data-category="dessert">
+                    <div class="dish-art"><img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&amp;fit=crop&amp;w=760&amp;q=80" alt="Fresh fruit and cream dessert in a glass" loading="lazy"></div>
+                    <div class="dish-info"><div><h3>Fruit & cream</h3><p>Local fruit, vanilla cream, honey</p></div><span class="price">$8</span></div>
+                    <span class="dish-tag">A little sweetness</span>
+                </article>
+            </div>
+            <p class="menu-note">Our menu changes with the seasons. <a href="#visit">Come see what's cooking <span aria-hidden="true">↗</span></a></p>
+        </section>
+
+        <section class="story-section" id="story">
+            <div class="story-art">
+                <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="A carefully prepared meal at a warmly lit restaurant" loading="lazy">
+                <span class="story-art-label">ROOTED IN THE<br>NEIGHBORHOOD</span>
+            </div>
+            <div class="story-copy">
+                <p class="eyebrow"><span></span> A PLACE TO SLOW DOWN</p>
+                <h2>Good things<br>grow <em>together.</em></h2>
+                <p>Sangin Restaurant started with a simple idea: bring people together over food that feels like home. We work with local growers, cook with the seasons, and always leave room at the table for one more.</p>
+                <a class="text-link text-link-dark" href="#visit">Come say hello <span aria-hidden="true">↗</span></a>
+            </div>
+        </section>
+
+        <section class="visit-section section-wrap" id="visit">
+            <div class="visit-copy">
+                <p class="eyebrow eyebrow-dark"><span></span> YOUR TABLE IS WAITING</p>
+                <h2>Make a day<br>of <em>it.</em></h2>
+                <p>Drop in for a long lunch or make an evening of it. We’d love to have you.</p>
+                <div class="visit-details">
+                    <div><span class="detail-icon" aria-hidden="true">⌖</span><p><strong>Find us</strong><br>24 Garden Lane, Your Town</p></div>
+                    <div><span class="detail-icon" aria-hidden="true">◷</span><p><strong>Come by</strong><br>Tue–Sun, 11:00 am–9:00 pm</p></div>
+                </div>
+            </div>
+            <form class="booking-card" id="booking-form">
+                <p class="eyebrow eyebrow-dark"><span></span> BOOK A TABLE</p>
+                <h3>Let’s save you a seat.</h3>
+                <label for="guest-name">Your name</label>
+                <input id="guest-name" name="name" type="text" placeholder="How should we greet you?" autocomplete="name" required>
+                <div class="form-row">
+                    <div><label for="guest-count">Guests</label><select id="guest-count" name="guests"><option>2 people</option><option>1 person</option><option>3 people</option><option>4 people</option><option>5+ people</option></select></div>
+                    <div><label for="booking-date">Date</label><input id="booking-date" name="date" type="date" required></div>
+                </div>
+                <div class="form-row booking-extra">
+                    <div><label for="booking-time">Preferred time</label><select id="booking-time" name="time"><option>12:00 pm</option><option>1:00 pm</option><option>5:00 pm</option><option>6:00 pm</option><option>7:00 pm</option><option>8:00 pm</option></select></div>
+                    <div><label for="booking-occasion">Occasion</label><select id="booking-occasion" name="occasion"><option>Just because</option><option>Birthday</option><option>Date night</option><option>Family gathering</option></select></div>
+                </div>
+                <button class="button booking-button" type="submit">Request a table <span aria-hidden="true">↗</span></button>
+                <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+                <p class="booking-footnote">For larger gatherings, please give us a call.</p>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <a class="brand footer-brand" href="#home" aria-label="Sangin Restaurant home"><img class="brand-logo" src="logo.svg" alt="Sangin Restaurant"></a>
+        <p>Made for moments worth sharing.</p>
+        <a class="back-top" href="#home">Back to top ↑</a>
+        <span class="copyright">© 2026 Sangin Restaurant</span>
+    </footer>
 </body>
 </html>
